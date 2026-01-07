@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<BizeUlasin>
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Mesajlar</h4>
+    <div class="card">
+        <h5 class="card-header">Mesajlar Listesi</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Gönderen</th>
+                    <th>Konu</th>
+                    <th>Tarih</th>
+                    <th>Sil</th>
+                    <th>Mesajı Aç</th>
+                </tr>
+                @foreach(var x in Model)
+                {
+                    <tr>
+                        <th>@x.bizeUlasinID</th>
+                        <td>@x.AdSoyad</td>
+                        <td>@x.Konu</td>
+                        <td>@x.Tarih</td>
+                        <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+                        <td><a href="#" class="btn btn-outline-info">Mesajı Aç</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+                    
+                    

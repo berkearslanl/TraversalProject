@@ -1,0 +1,21 @@
+﻿@model TraversalCoreProje.Models.MailRequest
+@{
+    Layout = "AdminLayout";
+}
+
+<h1>Yeni Mail Gönderme Sayfası</h1>
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Alıcı Mail Adresi")
+        <input type="text" asp-for="AliciMail" class="form-control" />
+        <br />
+        @Html.Label("Konu Başlığı")
+        <input type="text" asp-for="Konu" class="form-control" />
+        <br />
+        @Html.Label("Mesaj İçeriği")
+        <textarea asp-for="icerik" class="form-control" cols="30" rows="5" ></textarea>
+    </div>
+    <br />
+    <button class="btn btn-primary">Mail Gönder</button>
+</form>
+

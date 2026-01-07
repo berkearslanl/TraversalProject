@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.Rehberler
+@{
+    Layout = "AdminLayout";
+}
+
+<h1>Yeni Rehber Ekleme Sayfası</h1>
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Rehber Ad Soyadı")
+        <input type="text" asp-for="Ad" class="form-control" />
+        <br />
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="Aciklama" class="form-control" />
+        <br />
+        @Html.Label("Rehber Resim")
+        <input type="text" asp-for="Resim" class="form-control" />
+        <br />
+        @Html.Label("Sosyal Medya 1")
+        <input type="text" asp-for="Sosyal1" class="form-control" />
+        <br />
+        @Html.Label("Sosyal Medya 2")
+        <input type="text" asp-for="Sosyal2" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-primary">Rehber Ekle</button>
+</form>
+
+
+
+
+
+

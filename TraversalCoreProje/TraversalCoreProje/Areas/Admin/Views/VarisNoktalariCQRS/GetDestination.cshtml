@@ -1,0 +1,29 @@
+﻿@model GetDestinationByIdQueryResult
+@{
+    Layout = "AdminLayout";
+}
+
+<h2>Tur Düzenleme Sayfası</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="DestinationId" />
+    <label>Şehir</label>
+    <input type="text" asp-for="Sehir" class="form-control" />
+    <br />
+    <label>Gün - Gece</label>
+    <input type="text" asp-for="GeceGunduz" class="form-control" />
+    <br />
+    <label>Fiyat</label>
+    <input type="text" asp-for="Fiyat" class="form-control" /> $
+    <br />
+    <button class="btn btn-outline-dark w-100">Tur Güncelle</button>
+</form>
+
+
+
+
+
+
+
+
+

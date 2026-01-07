@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ExchangeApiViewModel2.Exchange_Rates>
+@{
+    Layout = "AdminLayout";
+}
+@{
+    int sayac = 0;
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Exchange Api</h4>
+    <div class="card">
+        <h5 class="card-header">Apiyle Kur Verileri Listesi</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Kur Adı</th>
+                    <th>Kur Oranı</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        @{
+                            sayac++;
+                        }
+                        <th>@sayac</th>
+                        <td>@x.currency</td>
+                        <td>@x.exchange_rate_buy</td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+    </div>
+</div>

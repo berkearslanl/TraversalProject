@@ -1,0 +1,17 @@
+﻿@model DuyurularUpdateDto
+@{
+    Layout = "AdminLayout";
+}
+
+<h1>Duyuru Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="DuyurularId" />
+    <label>Duyuru Başlığı</label>
+    <input type="text" asp-for="Baslik" class="form-control" />
+    <br />
+    <label>Duyuru İçeriği</label>
+    <input type="text" asp-for="icerik" class="form-control" />
+    <br />
+    <button class="btn btn-outline-warning">Güncelle</button>
+</form>

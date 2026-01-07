@@ -1,0 +1,35 @@
+﻿@model List<DuyurularListDto>
+@{
+    Layout = "AdminLayout";
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Duyurular</h4>
+    <div class="card">
+        <h5 class="card-header">Duyurular Listesi</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>İçerik</th>
+                    <th>Detaylar</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+                @foreach(var x in Model)
+                {
+                    <tr>
+                        <th>@x.DuyurularID</th>
+                        <td>@x.Baslik</td>
+                        <td>@x.icerik</td>
+                        <td><a href="#" class="btn btn-outline-dark">Detaylar</a></td>
+                        <td><a href="/Admin/Duyurular/duyuruGuncelle/@x.DuyurularID" class="btn btn-outline-info">Güncelle</a></td>
+                        <td><a href="/Admin/Duyurular/duyuruSil/@x.DuyurularID" class="btn btn-outline-danger">Sil</a></td>
+                    </tr>
+                }
+                </table>
+        </div>
+        <br />
+        <a href="/Admin/Duyurular/duyuruEkle/" class="btn btn-outline-primary">Duyuru Ekle</a>
+    </div>
+</div>

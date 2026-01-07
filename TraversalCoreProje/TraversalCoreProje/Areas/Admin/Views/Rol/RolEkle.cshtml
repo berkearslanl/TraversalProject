@@ -1,0 +1,12 @@
+﻿@model CreateRolViewModel
+@{
+    Layout = "AdminLayout";
+}
+<h1>Yeni Rol Oluşturma Sayfası</h1>
+
+<form method="post">
+    <label>Rol Adını Giriniz</label>
+    <input type="text" asp-for="RoleName" class="form-control" />
+    <br />
+    <button class="btn btn-outline-dark w-100">Rolü Ekle</button>
+</form>

@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA57742-6A1A-4EB3-A213-4368D752C7BC}|TraversalApiProject\\TraversalApiProject.csproj|c:\\users\\berke\\onedrive\\masa\u00FCst\u00FC\\asp.net murat y\u00FCceda\u011F\\youtube - traversal rezervasyon\\traversalapiproject\\traversalapiproject\\dal\\entities\\ziyaretci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA57742-6A1A-4EB3-A213-4368D752C7BC}|TraversalApiProject\\TraversalApiProject.csproj|solutionrelative:traversalapiproject\\dal\\entities\\ziyaretci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA57742-6A1A-4EB3-A213-4368D752C7BC}|TraversalApiProject\\TraversalApiProject.csproj|c:\\users\\berke\\onedrive\\masa\u00FCst\u00FC\\asp.net murat y\u00FCceda\u011F\\youtube - traversal rezervasyon\\traversalapiproject\\traversalapiproject\\controllers\\ziyaretcicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA57742-6A1A-4EB3-A213-4368D752C7BC}|TraversalApiProject\\TraversalApiProject.csproj|solutionrelative:traversalapiproject\\controllers\\ziyaretcicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAA57742-6A1A-4EB3-A213-4368D752C7BC}|TraversalApiProject\\TraversalApiProject.csproj|c:\\users\\berke\\onedrive\\masa\u00FCst\u00FC\\asp.net murat y\u00FCceda\u011F\\youtube - traversal rezervasyon\\traversalapiproject\\traversalapiproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAA57742-6A1A-4EB3-A213-4368D752C7BC}|TraversalApiProject\\TraversalApiProject.csproj|solutionrelative:traversalapiproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ziyaretci.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\TraversalApiProject\\DAL\\Entities\\Ziyaretci.cs",
+              "RelativeDocumentMoniker": "TraversalApiProject\\DAL\\Entities\\Ziyaretci.cs",
+              "ToolTip": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\TraversalApiProject\\DAL\\Entities\\Ziyaretci.cs",
+              "RelativeToolTip": "TraversalApiProject\\DAL\\Entities\\Ziyaretci.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T15:13:42.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ZiyaretciController.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\TraversalApiProject\\Controllers\\ZiyaretciController.cs",
+              "RelativeDocumentMoniker": "TraversalApiProject\\Controllers\\ZiyaretciController.cs",
+              "ToolTip": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\TraversalApiProject\\Controllers\\ZiyaretciController.cs",
+              "RelativeToolTip": "TraversalApiProject\\Controllers\\ZiyaretciController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T14:58:30.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\TraversalApiProject\\Program.cs",
+              "RelativeDocumentMoniker": "TraversalApiProject\\Program.cs",
+              "ToolTip": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalApiProject\\TraversalApiProject\\Program.cs",
+              "RelativeToolTip": "TraversalApiProject\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T14:54:25.446Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Sayfa Bulunamadı</title>
+    <style>
+        /* CSS Başlangıç */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 900;
+            margin: 0;
+            background: linear-gradient(120deg, #6c5ce7, #a29bfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .error-message {
+            font-size: 24px;
+            margin: 10px 0 30px;
+            color: #555;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #6c5ce7;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+        }
+
+            .home-button:hover {
+                background-color: #5849c4;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+            }
+
+        /* Küçük bir animasyon */
+        keyframes floating {
+            0%
+
+        {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+
+        }
+
+        .animate-float {
+            animation: floating 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="animate-float">
+            <h1 class="error-code">404</h1>
+        </div>
+
+        <p class="error-message">Hoppala! Aradığın sayfa galiba kaybolmuş.</p>
+
+        <a href="/Main/Index/" id="action-button" class="home-button">
+            Ana Sayfaya Dön
+        </a>
+    </div>
+
+    <script>
+        // JS ile bir etkileşim ekleyelim (Opsiyonel)
+        document.getElementById('action-button').addEventListener('click', function(e) {
+            console.log("Kullanıcı ana sayfaya yönlendiriliyor...");
+            // Buraya tıklama istatistiği veya özel bir log ekleyebilirsin
+        });
+    </script>
+
+</body>
+</html>

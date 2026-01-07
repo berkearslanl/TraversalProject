@@ -1,0 +1,13 @@
+﻿@model UpdateRoleViewModel
+@{
+    Layout = "AdminLayout";
+}
+<h1>Rol Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="RoleID" />
+    <label>Rol Adı</label>
+    <input type="text" asp-for="RoleName" class="form-control" />
+    <br />
+    <button class="btn btn-outline-dark w-100">Rolü Düzenle</button>
+</form>

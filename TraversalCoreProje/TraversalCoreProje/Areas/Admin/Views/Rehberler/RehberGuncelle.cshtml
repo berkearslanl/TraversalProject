@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concrete.Rehberler
+@{
+    Layout = "AdminLayout";
+}
+<h1>Rota Güncelleme Sayfası</h1>
+<br />
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="RehberID" />
+        @Html.Label("Rehber Ad Soyad")
+        <input type="text" asp-for="Ad" class="form-control" />
+        <br />
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="Aciklama" class="form-control" />
+        <br />
+        @Html.Label("Rehberin Resmi")
+        <input type="text" asp-for="Resim" class="form-control" />
+        <br />
+        @Html.Label("Sosyal Medya 1")
+        <input type="text" asp-for="Sosyal1" class="form-control" />
+        <br />
+        @Html.Label("Sosyal Medya 2")
+        <input type="text" asp-for="Sosyal2" class="form-control" />
+        <br />
+    </div>
+    <button class="btn btn-primary">Rehberi Güncelle</button>
+</form>

@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.VarisNoktalari
+@{
+    Layout = "AdminLayout";
+}
+<h1>Rota Güncelleme Sayfası</h1>
+<br />
+
+<form method="post" >
+    <div class="form-group">
+        <input type="hidden" asp-for="VarisNoktasiID" />
+        @Html.Label("Şehir")
+        <input type="text" asp-for="Sehir" class="form-control" />
+        <br />
+        @Html.Label("Gün Gece Sayısı")
+        <input type="text" asp-for="GeceGunduz" class="form-control" />
+        <br />
+        @Html.Label("Fiyat")
+        <input type="text" asp-for="Fiyat" class="form-control" />
+        <br />
+        @Html.Label("Kapasite")
+        <input type="text" asp-for="Kapasite" class="form-control" />
+        <br />
+        @Html.Label("Ana Görsel")
+        <input type="text" asp-for="Resim" class="form-control" />
+        <br />
+        @Html.Label("Kapak Görsel")
+        <input type="text" asp-for="KapakResim" class="form-control" />
+        <br />
+        @Html.Label("Görsel 2")
+        <input type="text" asp-for="Resim2" class="form-control" />
+        <br />
+        @Html.Label("Detay 1")
+        <input type="text" asp-for="DetayAciklama1" class="form-control" />
+        <br />
+        @Html.Label("Detay 2")
+        <input type="text" asp-for="DetayAciklama2" class="form-control" />
+        <br />
+        @Html.Label("Açıklama")
+        <textarea cols="30" rows="5" class="form-control" asp-for="Aciklama"></textarea>
+        <br />
+    </div>
+    <button class="btn btn-primary">Rota Güncelle</button>
+</form>

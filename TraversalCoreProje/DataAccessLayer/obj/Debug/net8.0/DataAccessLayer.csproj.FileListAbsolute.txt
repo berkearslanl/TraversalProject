@@ -1,0 +1,17 @@
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.deps.json
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.runtimeconfig.json
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAcce.E67BD773.Up2Date
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.dll
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\refint\DataAccessLayer.dll
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\berke\OneDrive\Masaüstü\ASP.NET Murat Yücedağ\Youtube - Traversal Rezervasyon\TraversalCoreProje\DataAccessLayer\obj\Debug\net8.0\ref\DataAccessLayer.dll

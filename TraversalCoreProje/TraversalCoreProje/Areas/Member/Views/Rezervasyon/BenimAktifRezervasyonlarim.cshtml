@@ -1,0 +1,106 @@
+﻿@using EntityLayer.Concrete
+@model List<Rezervasyon>
+@{
+    Layout = "MemberLayout";
+}
+
+@{
+    var aktifKayitlar = Model.Where(x => x.Durum == "Onaylandı").ToList(); // Şartını buraya yaz
+}
+
+@if (aktifKayitlar.Count > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Aktif Rezervasyonlarım</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <p class="card-text">Web sitemiz Traversal üzerinde yapmış olduğunuz aktif rezervasyon listemize aşağıdan erişebilirsiniz.</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Lokasyon</th>
+                                        <th>Kişi Sayısı</th>
+                                        <th>Rezervasyon Tarihi</th>
+                                        <th>Durum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var x in Model)
+                                    {
+                                        <tr>
+                                            <td>@x.RezervasyonId</td>
+                                            <td>@x.varisNoktalari.Sehir</td>
+                                            <td>@x.KisiSayisi</td>
+                                            <td>@x.RezervasyonTarihi</td>
+                                            <td>@x.Durum</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+else
+{
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Aktif Rezervasyonlarım</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <p class="card-text">Web sitemiz Traversal üzerinde yapmış olduğunuz aktif rezervasyon listemize aşağıdan erişebilirsiniz.</p>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Lokasyon</th>
+                                        <th>Kişi Sayısı</th>
+                                        <th>Rezervasyon Tarihi</th>
+                                        <th>Durum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5" class="text-center">Kriterlerinize uygun aktif bir rezervasyon bulunamadı.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

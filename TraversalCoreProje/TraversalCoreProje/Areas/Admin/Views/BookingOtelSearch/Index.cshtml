@@ -1,0 +1,67 @@
+﻿@model IEnumerable<BookingOtelSearchViewModel.Result>
+@{
+    Layout = "AdminLayout";
+}
+@{
+    int sayac = 0;
+    double score;
+    string scoreWord = "";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Paris / Fransa Hotel Api</h4>
+    <div class="card">
+        <h5 class="card-header">Apiyle Otel Listesi</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Otel Adı</th>
+                    <th>Otel Puanı</th>
+                    <th>Otel Değerlendirmesi</th>
+                    <th>Detaylar</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        @{
+                            sayac++;
+                        }
+                        <th>@sayac</th>
+                        <td>@x.hotel_name</td>
+                        @{
+                            score = double.Parse(@x.review_score.ToString()) / 10;
+                        }
+                        <td>@score</td>
+                        @{
+                            if (@x.review_score_word=="Very good")
+                            {
+                                scoreWord = "Çok iyi";
+                            }
+                            if (@x.review_score_word == "Good")
+                            {
+                                scoreWord = "İyi";
+                            }
+                            if (@x.review_score_word == "Fabulous")
+                            {
+                                scoreWord = "Harika";
+                            }
+                            if (@x.review_score_word == "Superb")
+                            {
+                                scoreWord = "Mükemmel";
+                            }
+                            if (@x.review_score_word == "Exceptional")
+                            {
+                                scoreWord = "Olağanüstü";
+                            }
+                        }
+                        <td>@scoreWord</td>
+                        <td>@x.review_score_word</td>
+                        <td><a href="#" class="btn btn-outline-warning">Detaylar</a></td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+    </div>
+</div>

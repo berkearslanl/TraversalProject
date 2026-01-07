@@ -1,0 +1,120 @@
+﻿@using EntityLayer.Concrete
+@model List<Rehberler>
+@{
+    Layout = "AdminLayout";
+}
+<style>
+    img:hover {
+        transform: scale(1.1); /* Mouse ile üzerine gelince hafifçe büyür */
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+</style>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Rehberler</h4>
+    <div class="card">
+        <h5 class="card-header">Rehberler Listesi</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Görsel</th>
+                    <th>Ad Soyad</th>
+                    <th>Açıklama</th>
+                    <th>Durum</th>
+                    <th>İşlemler</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <th>@x.RehberID</th>
+                        <th><img src="@x.Resim" /></th>
+                        <td>@x.Ad</td>
+                        <td>@x.Aciklama</td>
+                        @{
+                            if (x.Durum == true)
+                            {
+                                <td style="color:forestgreen">Aktif Rehber</td>
+                            }
+                            else
+                            {
+                                <td style="color:indianred">Pasif Rehber</td>
+                            }
+                        }
+
+                        <td>
+                            <a href="/Admin/Rehberler/RehberGuncelle/@x.RehberID" class="btn btn-outline-info">Düzenle</a>
+                            <a href="#" onclick="deleteRoute(@x.RehberID)" class="btn btn-outline-danger">Pasif Yap</a>
+                            <a href="/Admin/Rehberler/RehberAktifYap/@x.RehberID" class="btn btn-outline-success">Aktif Yap</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <br />
+        <a href="/Admin/Rehberler/RehberEkle/" class="btn btn-outline-primary">Yeni Rehber Ekleme</a>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function deleteRoute(id) {
+        Swal.fire({
+            title: 'Bu rehberi pasif yapmak istiyor musunuz?',
+            text: "Rehber pasif hale getirilecek!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Evet, sil!',
+            cancelButtonText: 'İptal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Eğer evet derse Controller'daki aksiyona yönlendiriyoruz
+                window.location.href = "/Admin/Rehberler/RehberPasifYap/" + id;
+            }
+        })
+    }
+</script>
+
+
+@if (TempData["RehberEklendi"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Başarılı!',
+            text: '@Html.Raw(TempData["RehberEklendi"])',
+            icon: 'success',
+            confirmButtonText: 'Tamam',
+            customClass: {
+                confirmButton: 'btn btn-primary' // Sneat temasına uyum sağlaması için
+            },
+            buttonsStyling: false
+        });
+    </script>
+}
+
+@if (TempData["RehberGuncellendi"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Başarılı!',
+            text: '@Html.Raw(TempData["RehberGuncellendi"])',
+            icon: 'success',
+            confirmButtonText: 'Tamam',
+            customClass: {
+                confirmButton: 'btn btn-primary' // Sneat temasına uyum sağlaması için
+            },
+            buttonsStyling: false
+        });
+    </script>
+}

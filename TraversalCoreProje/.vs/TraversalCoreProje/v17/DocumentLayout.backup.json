@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalCoreProje\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{122EE354-3745-49C4-BCB4-48E005F00025}|TraversalCoreProje\\TraversalCoreProje.csproj|c:\\users\\berke\\onedrive\\masa\u00FCst\u00FC\\asp.net murat y\u00FCceda\u011F\\youtube - traversal rezervasyon\\traversalcoreproje\\traversalcoreproje\\views\\sifreyenile\\sifremiyenile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{122EE354-3745-49C4-BCB4-48E005F00025}|TraversalCoreProje\\TraversalCoreProje.csproj|solutionrelative:traversalcoreproje\\views\\sifreyenile\\sifremiyenile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{122EE354-3745-49C4-BCB4-48E005F00025}|TraversalCoreProje\\TraversalCoreProje.csproj|c:\\users\\berke\\onedrive\\masa\u00FCst\u00FC\\asp.net murat y\u00FCceda\u011F\\youtube - traversal rezervasyon\\traversalcoreproje\\traversalcoreproje\\controllers\\sifreyenilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{122EE354-3745-49C4-BCB4-48E005F00025}|TraversalCoreProje\\TraversalCoreProje.csproj|solutionrelative:traversalcoreproje\\controllers\\sifreyenilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SifremiYenile.cshtml",
+              "DocumentMoniker": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalCoreProje\\TraversalCoreProje\\Views\\SifreYenile\\SifremiYenile.cshtml",
+              "RelativeDocumentMoniker": "TraversalCoreProje\\Views\\SifreYenile\\SifremiYenile.cshtml",
+              "ToolTip": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalCoreProje\\TraversalCoreProje\\Views\\SifreYenile\\SifremiYenile.cshtml",
+              "RelativeToolTip": "TraversalCoreProje\\Views\\SifreYenile\\SifremiYenile.cshtml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAAAIUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-07T19:33:29.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SifreYenileController.cs",
+              "DocumentMoniker": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalCoreProje\\TraversalCoreProje\\Controllers\\SifreYenileController.cs",
+              "RelativeDocumentMoniker": "TraversalCoreProje\\Controllers\\SifreYenileController.cs",
+              "ToolTip": "C:\\Users\\berke\\OneDrive\\Masa\u00FCst\u00FC\\ASP.NET Murat Y\u00FCceda\u011F\\Youtube - Traversal Rezervasyon\\TraversalCoreProje\\TraversalCoreProje\\Controllers\\SifreYenileController.cs",
+              "RelativeToolTip": "TraversalCoreProje\\Controllers\\SifreYenileController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T18:32:06.556Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

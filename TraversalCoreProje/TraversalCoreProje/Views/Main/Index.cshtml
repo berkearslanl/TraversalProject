@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+
+@await Component.InvokeAsync("SliderPartial")
+@await Component.InvokeAsync("PopulerVarisNoktalariPartial")
+@await Component.InvokeAsync("istatistikPartial")
+@await Component.InvokeAsync("OneCikanlarPartial")
+@await Component.InvokeAsync("AltHakkindaPartial")
+@await Component.InvokeAsync("ReferanslarPartial")
+
+@if (TempData["LoginStatus"] != null)
+{
+	<script>
+		Swal.fire({
+			title: 'Başarılı',
+			text: '@Html.Raw(TempData["LoginStatus"])',
+			icon: 'success',
+			confirmButtonText: 'Tamam',
+			confirmButtonColor: '#3085d6'
+		});
+	</script>
+}

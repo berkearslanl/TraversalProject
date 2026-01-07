@@ -1,0 +1,150 @@
+﻿@model SifreYenileViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Yenileme | Traversal Core</title>
+    <link rel="stylesheet" href="~/css/forget-password.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .login-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .card-header h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-header p {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+                color: #555;
+                font-weight: 500;
+            }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+            .form-control:focus {
+                border-color: #764ba2;
+                box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+            }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: #764ba2;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            .btn-submit:hover {
+                background: #5a387e;
+            }
+
+        .card-footer {
+            margin-top: 20px;
+        }
+
+            .card-footer a {
+                color: #764ba2;
+                text-decoration: none;
+                font-size: 0.85rem;
+                transition: color 0.3s ease;
+            }
+
+                .card-footer a:hover {
+                    color: #333;
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="card-header">
+                <h2>Şifre Yenileme</h2>
+                <p>Yeni şifrenizi girerek şifrenizi değiştirebilirsiniz.</p>
+            </div>
+
+            <form method="post">
+                <div class="form-group">
+                    <label>Yeni Şifrenizi Giriniz</label>
+                    <input type="password" class="form-control" asp-for="Sifre" placeholder="****" required />
+                    <br />
+                    <label>Şifrenizi Tekrar Giriniz</label>
+                    <input type="password" class="form-control" asp-for="SifreTekrar" placeholder="****" required />
+                </div>
+
+                <button type="submit" class="btn-submit">Şifremi Yenile</button>
+            </form>
+
+            <div class="card-footer">
+                <a href="/Login/GirisYap/">İptal</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

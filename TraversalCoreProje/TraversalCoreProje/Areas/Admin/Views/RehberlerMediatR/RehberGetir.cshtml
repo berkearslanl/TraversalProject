@@ -1,0 +1,16 @@
+﻿@model GetGuideByIdQueryResult
+@{
+    Layout = "AdminLayout";
+}
+
+<h2>Rehber Bilgi Düzenleme Sayfası</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="RehberID" />
+    <label>Rehber Adı</label>
+    <input type="text" asp-for="Ad" class="form-control" />
+    <br />
+    <label>Rehber Açıklaması</label>
+    <input type="text" asp-for="Aciklama" class="form-control" />
+    <br />
+</form>

@@ -1,0 +1,41 @@
+﻿@model List<ZiyaretciViewModel>
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Api İşlemleri</h4>
+    <div class="card">
+        <h5 class="card-header">Ziyaretçi Listesi</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Şehir</th>
+                    <th>Ülke</th>
+                    <th>Mail</th>
+                    <th>Güncelle</th>
+                    <th>Sil</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <th>@x.ZiyaretciID</th>
+                        <td>@x.Ad</td>
+                        <td>@x.Soyad</td>
+                        <td>@x.Sehir</td>
+                        <td>@x.Ülke</td>
+                        <td>@x.Mail</td>
+                        <td><a href="/Admin/ZiyaretciApi/ziyaretciGuncelle/@x.ZiyaretciID/" class="btn btn-outline-warning">Güncelle</a></td>
+                        <td><a href="/Admin/ZiyaretciApi/ziyaretciSil/@x.ZiyaretciID/" class="btn btn-outline-danger">Sil</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <br />
+        <a href="/Admin/ZiyaretciApi/ziyaretciEkle/" class="btn btn-outline-info">Yeni Ziyaretçi Ekleme</a>
+    </div>
+</div>
+

@@ -1,0 +1,88 @@
+﻿@using EntityLayer.Concrete
+@model List<Rezervasyon>
+@{
+    Layout = "AdminLayout";
+}
+
+@{
+    var rotalar = Model.ToList();
+}
+
+
+
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Kullanıcının Onaylanan Rezervasyonları</h4>
+    <div class="card">
+        <h5 class="card-header">Turlar</h5>
+        <div class="table-responsive text-nowrap">
+            @if (rotalar.Count > 0)
+            {
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Ad Soyad</th>
+                        <th>Rota</th>
+                        <th>Kişi Sayısı</th>
+                        <th>Açıklama</th>
+                        <th>Tarih</th>
+                        <th>Sil</th>
+                    </tr>
+                    @foreach (var x in Model)
+                    {
+
+                        <tr>
+                            <th>@x.RezervasyonId</th>
+                            <th>@x.AppUser.Ad @x.AppUser.Soyad</th>
+                            <td>@x.varisNoktalari.Sehir</td>
+                            <td>@x.KisiSayisi</td>
+                            <td>@x.Aciklama</td>
+                            <td>@x.RezervasyonTarihi.ToString("dd MMM yyyy")</td>
+                            <td><a href="#" onclick="deleteRoute(@x.RezervasyonId)" class="btn btn-outline-danger">Sil</a></td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Ad Soyad</th>
+                        <th>Rota</th>
+                        <th>Kişi Sayısı</th>
+                        <th>Açıklama</th>
+                        <th>Tarih</th>
+                        <th>Sil</th>
+                    </tr>
+
+                    <tr>
+                        <td colspan="7" class="text-center">Kriterlerinize uygun bir onaylanmış rezervasyon bulunamadı.</td>
+                    </tr>
+
+                </table>
+            }
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function deleteRoute(id) {
+        Swal.fire({
+            title: 'Bu rezervasyonu silmek istiyor musunuz?',
+            text: "Rezervasyon kaydı tamamen kaldırılacak!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Evet, sil!',
+            cancelButtonText: 'İptal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Eğer evet derse Controller'daki aksiyona yönlendiriyoruz
+                window.location.href = "/Admin/Kullanicilar/RezervasyonSil/" + id;
+            }
+        })
+    }
+</script>

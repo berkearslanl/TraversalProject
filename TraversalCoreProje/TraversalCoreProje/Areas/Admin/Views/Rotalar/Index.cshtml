@@ -1,0 +1,95 @@
+﻿@using EntityLayer.Concrete
+@model List<VarisNoktalari>
+@{
+    Layout = "AdminLayout";
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Tur Rotaları</h4>
+    <div class="card">
+        <h5 class="card-header">Rotalar Listesi</h5>
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Şehir</th>
+                    <th>Süre</th>
+                    <th>Kapasite</th>
+                    <th>Fiyat</th>
+                    <th>Sitede Gör</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.VarisNoktasiID</td>
+                        <td>@x.Sehir</td>
+                        <td>@x.GeceGunduz</td>
+                        <td>@x.Kapasite</td>
+                        <td>$@x.Fiyat</td>
+                        <td><a href="/Rotalar/TurDetay/@x.VarisNoktasiID" class="btn btn-outline-info">Sitede Gör</a></td>
+                        <td><a href="#" onclick="deleteRoute(@x.VarisNoktasiID)" class="btn btn-outline-danger">Sil</a></td>
+                        <td><a href="/Admin/Rotalar/RotaGuncelle/@x.VarisNoktasiID" class="btn btn-outline-success">Güncelle</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <br />
+    <a href="/Admin/Rotalar/RotaEkle" class="btn btn-outline-primary">Yeni Tur Rotası Oluşturma</a>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function deleteRoute(id) {
+        Swal.fire({
+            title: 'Bu rotayı silmek istiyor musunuz?',
+            text: "Rota pasif hale getirilecek!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Evet, sil!',
+            cancelButtonText: 'İptal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Eğer evet derse Controller'daki aksiyona yönlendiriyoruz
+                window.location.href = "/Admin/Rotalar/RotaSil/" + id;
+            }
+        })
+    }
+</script>
+
+@if (TempData["AlertMessage"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Başarılı!',
+            text: '@Html.Raw(TempData["AlertMessage"])',
+            icon: 'success',
+            confirmButtonText: 'Tamam',
+            customClass: {
+                confirmButton: 'btn btn-primary' // Sneat temasına uyum sağlaması için
+            },
+            buttonsStyling: false
+        });
+    </script>
+}
+@if (TempData["GuncellendiAlert"] != null)
+{
+    <script>
+        Swal.fire({
+            title: 'Başarılı!',
+            text: '@Html.Raw(TempData["GuncellendiAlert"])',
+            icon: 'success',
+            confirmButtonText: 'Tamam',
+            customClass: {
+                confirmButton: 'btn btn-primary' // Sneat temasına uyum sağlaması için
+            },
+            buttonsStyling: false
+        });
+    </script>
+}

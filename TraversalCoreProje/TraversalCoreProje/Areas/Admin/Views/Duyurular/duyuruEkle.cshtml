@@ -1,0 +1,25 @@
+﻿@model DuyurularAddDto
+@{
+    Layout = "AdminLayout";
+}
+
+<h1>Duyuru Ekleme Sayfası</h1>
+
+<form method="post">
+    <label>Duyuru Başlığı</label>
+    <input type="text" asp-for="Baslik" class="form-control" />
+    <span asp-validation-for="Baslik" class="text-danger" style="color:red"></span>
+    <br />
+    <label>Duyuru İçeriği</label>
+    <input type="text" asp-for="icerik" class="form-control" />
+    <span asp-validation-for="icerik" class="text-danger" style="color:red"></span>
+    <br />
+    <button class="btn btn-outline-dark w-100">Duyuru Oluştur</button>
+</form>
+
+
+
+
+
+
+

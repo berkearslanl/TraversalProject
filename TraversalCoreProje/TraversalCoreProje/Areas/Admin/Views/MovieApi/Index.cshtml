@@ -1,0 +1,42 @@
+﻿@model List<movieApiviewModel>
+@{
+    Layout = "AdminLayout";
+}
+<style>
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+</style>
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4">Movie Api</h4>
+    <div class="card">
+        <h5 class="card-header">IMDB En iyi 100 Film Listesi</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Resim</th>
+                    <th>Film Adı</th>
+                    <th>Imdb Puanı</th>
+                    <th>Yapım Yılı</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <th>@x.rank</th>
+                        <th><img src="@x.image" /></th>
+                        <td>@x.title</td>
+                        <td>@x.rating</td>
+                        <td>@x.year</td>
+                    </tr>
+                    
+                }
+            </table>
+        </div>
+    </div>
+</div>

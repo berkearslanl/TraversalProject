@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "AdminLayout";
+}
+@await Component.InvokeAsync("AdminDashboardHeader")
+<div class="content-wrapper">
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            @await Component.InvokeAsync("DashboardBanner")
+            @await Component.InvokeAsync("Cards1")
+            @await Component.InvokeAsync("TotalRevenue")
+            @await Component.InvokeAsync("Cards2")
+        </div>
+        <div class="row">
+            @await Component.InvokeAsync("Rotalaristatistik")
+            @await Component.InvokeAsync("Rotalaristatistik2")
+            @await Component.InvokeAsync("AdminDashboardRehberListesi")
+        </div>
+    </div>
+    <div class="content-backdrop fade"></div>
+</div>
+<div class="layout-overlay layout-menu-toggle"></div>
+
+@await Component.InvokeAsync("AdminDashboardScripts")

@@ -1,0 +1,144 @@
+﻿@{
+    Layout = "AdminLayout";
+}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<h2>Şehir Ülke İşlemleri</h2>
+<br />
+<button type="button" id="btngetlist" class="btn btn-outline-primary">Şehir Listesi</button>
+<button type="button" id="btngetbyid" class="btn btn-outline-info">Şehir Getir</button>
+<button type="button" id="btnadd" class="btn btn-outline-success">Şehir Ekle</button>
+<button type="button" id="btndelete" class="btn btn-outline-danger">Şehir Sil</button>
+<button type="button" id="btnuptade" class="btn btn-outline-warning">Şehir Güncelle</button>
+
+<br />
+<br />
+
+<div id="sehirlistesi">
+</div>
+
+<div>
+    <input type="text" id="txtid" placeholder="Şehir ID Değerini Giriniz" class="form-control" />
+</div>
+<br />
+<div>
+    <input type="text" id="txtsilinecekid" placeholder="Silinecek ID Değerini Giriniz" class="form-control" />
+</div>
+
+<br />
+
+<div>
+    <input type="text" id="txtguncellenecekid" placeholder="Güncellenecek ID Değerini Giriniz" class="form-control" />
+    <input type="text" id="txtname" placeholder="Güncellenecek Şehir Değerini Giriniz" class="form-control" />
+    <input type="text" id="txtdaynight" placeholder="Güncellenecek Gün-Gece Değerini Giriniz" class="form-control" />
+</div>
+
+<br/>
+<div id="idyegorerotalistele">
+
+</div>
+
+
+<br />
+<div>
+    <input type="text" id="txtsehir" placeholder="Şehir Adını Giriniz" class="form-control" />
+    <br />
+    <input type="text" id="txtgecegun" placeholder="Gün - Gece Sayısını Giriniz" class="form-control" />
+    <br />
+    <input type="text" id="txtfiyat" placeholder="Fiyatı Giriniz" class="form-control" />
+    <br />
+    <input type="text" id="txtkapasite" placeholder="Kapasiteyi Giriniz" class="form-control" />
+</div>
+
+
+<script>
+    //Listeleme
+    $("#btngetlist").click(function(){
+        $.ajax({
+            contentType:"application/json",
+            dataType:"json",
+            type:"Get",
+            url:"/Admin/Sehir/SehirListesi/",
+            success:function(func){
+                let w = jQuery.parseJSON(func);
+                console.log(w);
+                    let tablehtml = "<table class=table table-bordered> <tr><th> Şehir Adı </th> <th> Gün Gece </th> <th> Fiyat </th> </tr>";
+                    $.each(w,(index,value)=>{
+                        tablehtml+=`<tr><td>${value.Sehir}</td> <td>${value.GeceGunduz}</td> <td>${value.Fiyat} $</td> </tr>`
+                    });
+                    tablehtml+="</table>";
+                    $("#sehirlistesi").html(tablehtml);
+            }
+        });
+    });
+
+    //Ekleme
+    $("#btnadd").click(function(){
+        let sehirDegerleri={
+            Sehir:$("#txtsehir").val(),
+            GeceGunduz:$("#txtgecegun").val(),
+            Fiyat:$("#txtfiyat").val(),
+            Kapasite:$("#txtkapasite").val()
+        };
+        $.ajax({
+            type:"post",
+            url:"/Admin/Sehir/sehirEkle/",
+            data:sehirDegerleri,
+            success:function(func){
+                let result=jQuery.parseJSON(func);
+                alert("Şehir - Rota başarılı bir şekilde eklendi!");
+            }
+        });
+    });
+
+    //idye Göre Getirme
+    $("#btngetbyid").click(x=>{
+        let id=$("#txtid").val();
+
+        $.ajax({
+            contentType:"application/json",
+            dataType:"json",
+            type:"get",
+            url:"/Admin/Sehir/idyeGoreGetir",
+            data:{VarisNoktasiID:id},
+            success:function(func2){
+                let result = jQuery.parseJSON(func2);
+                console.log(result);
+                let htmlstr=`<table class=table table-bordered> <tr><th> Şehir Adı </th> <th> Gün Gece </th> <th> Fiyat </th> </tr> <tr><td>${result.Sehir}</td> <td>${result.GeceGunduz}</td> <td>${result.Fiyat} $</td> </tr></table>`;
+
+                $("#idyegorerotalistele").html(htmlstr);
+            }
+        });
+    });
+
+    //Silme
+    $("#btndelete").click(x=>{
+        let id = $("#txtsilinecekid").val();
+        $.ajax({
+            url:"/Admin/Sehir/sehirSil/"+id,
+            type:"post",
+            contentType:"application/json",
+            dataType:"json",
+            success:function(func3){
+                alert("Şehir - Rota başarılı bir şekilde silindi!")
+            }
+        });
+    });
+
+    //Güncelleme
+    $("#btnuptade").click(function(){
+        let values = {
+            VarisNoktasiID:$("#txtguncellenecekid").val(),
+            Sehir:$("#txtname").val(),
+            GeceGunduz:$("#txtdaynight").val()
+        };
+        $.ajax({
+            type:"post",
+            url:"/Admin/Sehir/sehirGuncelle/",
+            data:values,
+            success:function(func4){
+                alert("Şehir - Rota başarılı bir şekilde güncellendi!")
+            }
+        });
+    });
+</script>

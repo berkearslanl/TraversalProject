@@ -1,0 +1,139 @@
+﻿@model TraversalCoreProje.Models.UserRegisterViewModel
+@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Traversal Kullanıcı Kayıt Ekranı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+          content="Invent Signup Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="/web/css/style.css" type="text/css" media="all" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+
+<body>
+    <section class="w3l-login-6">
+        <div class="login-hny">
+            <div class="form-content">
+                <div class="form-right">
+                    <div class="overlay">
+                        <div class="grid-info-form">
+                            <h5>Traversal Rezervasyon</h5>
+                            <h3>Hesap Oluşturun </h3>
+                            <p>
+                                Birbirinden deneyimli rehberlerimiz eşliğinde İskandinav ülkelerinin soğuğunu, Akdeniz ülkelerinin sıcaklığını, güzel ülkemiz Türkiye'nin Kapadokyası'ndan Sürmene'ye, Ölüdeniz'den Asos'a, Balkan Turlarından Mısır Çöllerine kadar aklınıza gelen her yere bir tık uzaktayız. Seyahatlerimize katılmak için hemen kayıt olun.
+                            </p>
+                            <a href="/Login/GirisYap/" class="read-more-1 btn">HADİ BAŞLAYALIM</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-left">
+                    <div class="middle">
+                        <h4>Bize Katılın</h4>
+                        <p>Hemen ücretsiz hesap oluşturun ! </p>
+                    </div>
+                    <form method="post" class="signin-form" id="registerForm">
+                        <div class="form-input">
+                            <label>Adınız</label>
+                            <input type="text" asp-for="Ad" />
+                            <span asp-validation-for="Ad" style="color:red"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Soyadınız</label>
+                            <input type="text" asp-for="Soyad" />
+                            <span asp-validation-for="Soyad" style="color:red"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Kullanıcı Adınız</label>
+                            <input type="text" asp-for="KullaniciAdi" />
+                            <span asp-validation-for="KullaniciAdi" style="color:red"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>E-Posta</label>
+                            <input type="email" asp-for="Mail" />
+                            <span asp-validation-for="Mail" style="color:red"></span>
+                        </div>
+                        <div class="form-input">
+                            <label>Şifreniz</label>
+                            <input type="password" asp-for="Sifre" />
+                            <span asp-validation-for="Sifre" style="color:red"></span>
+                            <div class="text-danger" style="color:red" asp-validation-summary="ModelOnly"></div>
+                        </div>
+                        <div class="form-input">
+                            <label>Şifre Tekrar</label>
+                            <input type="password" asp-for="SifreTekrar" />
+                            <span asp-validation-for="SifreTekrar" style="color:red"></span>
+                            <div class="text-danger" style="color:red" asp-validation-summary="ModelOnly"></div>
+                        </div>
+@* 
+                        <label class="container">
+                            <a href="https://itucekirdek.com/wp-content/uploads/2018/01/GENEL-G%C4%B0ZL%C4%B0L%C4%B0K-S%C3%96ZLE%C5%9EMES%C4%B0.pdf" style="text-decoration:underline">Gizlilik Sözleşmesini</a>Kabul Ediyorum
+                            <input type="checkbox" id="chbSözlesme">
+							<span class="checkmark"></span>
+                        </label> *@
+                        <label class="container">
+                            <input type="checkbox" id="chbSözlesme">
+                            <span class="checkmark"></span>
+                            <a href="https://itucekirdek.com/wp-content/uploads/2018/01/GENEL-G%C4%B0ZL%C4%B0L%C4%B0K-S%C3%96ZLE%C5%9EMES%C4%B0.pdf" style="text-decoration:underline">Gizlilik Sözleşmesini </a>Kabul Ediyorum
+                        </label>
+
+
+                        @* <button class="btn">Kayıt Ol</button>  *@
+                        <button type="button" onclick="checkForm()" class="btn">Kayıt Ol</button>
+                    </form>
+                    <div class="copy-right text-center">
+                        <p>
+                            © @DateTime.Now.Year Tüm hakları saklıdır |
+                            <a href="https://www.linkedin.com/in/mehmetberkearslan/" target="_blank">Mehmet Berke Arslan</a>
+                            tarafından tasarlanmıştır.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- //login-section -->
+</body>
+
+</html>
+<script>
+    function checkForm() {
+        var checkBox = document.getElementById("chbSözlesme");
+
+        if (checkBox.checked == false) {
+            // İşte modern alert burası!
+            Swal.fire({
+                title: 'Hata!',
+                text: 'Lütfen gizlilik sözleşmesini kabul ediniz.',
+                icon: 'warning',
+                confirmButtonText: 'Tamam',
+                confirmButtonColor: '#ff0000' // Senin buton rengine uygun bir renk seçebilirsin
+            });
+        } else {
+            // Eğer her şey tamamsa formu gönder
+            document.getElementById("registerForm").submit();
+        }
+    }
+</script>

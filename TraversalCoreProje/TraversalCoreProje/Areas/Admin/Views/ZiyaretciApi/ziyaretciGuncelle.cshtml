@@ -1,0 +1,27 @@
+﻿@model ZiyaretciViewModel
+@{
+    Layout = "AdminLayout";
+}
+
+<h1>Api İle Ziyaretçi Güncelleme Sayfası</h1>
+<br />
+
+<form method="post">
+    <input type="hidden" asp-for="ZiyaretciID" />
+    <label>Ziyaretçi Adı</label>
+    <input type="text" class="form-control" asp-for="Ad" />
+    <br />
+    <label>Ziyaretçi Soyadı</label>
+    <input type="text" class="form-control" asp-for="Soyad" />
+    <br />
+    <label>Ziyaretçi Maili</label>
+    <input type="text" class="form-control" asp-for="Mail" />
+    <br />
+    <label>Ziyaretçi Şehri</label>
+    <input type="text" class="form-control" asp-for="Sehir" />
+    <br />
+    <label>Ziyaretçi Ülkesi</label>
+    <input type="text" class="form-control" asp-for="Ülke" />
+    <br />
+    <button class="btn btn-outline-dark w-100">Ziyaretçi Güncelle</button>
+</form>

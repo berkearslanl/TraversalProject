@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "TraversalApiProject.Controllers.ZiyaretciController",
+    "Method": "ziyaretciListesi",
+    "RelativePath": "api/Ziyaretci",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TraversalApiProject.Controllers.ZiyaretciController",
+    "Method": "ziyaretciEkle",
+    "RelativePath": "api/Ziyaretci",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "p",
+        "Type": "TraversalApiProject.DAL.Entities.Ziyaretci",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TraversalApiProject.Controllers.ZiyaretciController",
+    "Method": "ziyaretciGuncelle",
+    "RelativePath": "api/Ziyaretci",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "p",
+        "Type": "TraversalApiProject.DAL.Entities.Ziyaretci",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TraversalApiProject.Controllers.ZiyaretciController",
+    "Method": "ziyaretciGetir",
+    "RelativePath": "api/Ziyaretci/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TraversalApiProject.Controllers.ZiyaretciController",
+    "Method": "ziyaretciSil",
+    "RelativePath": "api/Ziyaretci/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
